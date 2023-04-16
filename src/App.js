@@ -5,7 +5,7 @@ import { router } from './Pages/Routes/Route/Route';
 
 function App() {
   return (
-    <div className="App">
+    <div className="px-[7%]">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

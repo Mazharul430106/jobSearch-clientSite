@@ -4,22 +4,14 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
 
     const menuItems = <React.Fragment>
-
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/register'>Register</Link></li>
         <li><Link to='/login'>Login</Link></li>
 
-        <li>
-            <form className='p-0'>
-                <input type="text" placeholder="Type here" className="input input-bordered w-full" />
-                <button className='btn'>Search</button>
-            </form>
-        </li>
-
     </React.Fragment>
 
     return (
-        <div className="navbar bg-base-100 bg-gray-400">
+        <div className="navbar bg-base-100 bg-gray-300">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,8 +21,15 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl">Job Search Website</Link>
+                <Link to='/' className="btn btn-ghost normal-case text-xl">Job Search</Link>
+
+                <form className='p-0 flex items-center gap-2'>
+                    <input type="text" placeholder="Search here" className="input input-bordered w-full" />
+                    <button className='btn'>Search</button>
+                </form>
+
             </div>
+
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {menuItems}
