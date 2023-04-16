@@ -10,13 +10,14 @@ const Register = () => {
     // console.log(createUser)
 
     const { register, handleSubmit } = useForm()
-    const handleRegister = (data) => {
+    const handleRegister = (data, even) => {
         // console.log(data);
         createUser(data.email, data.password)
         .then(result=> {
             const user = result.user;
             console.log(user)
             toast.success('User Created Successfully');
+            even.target.reset();
         })
         .catch(error=> {
             console.log(error)
