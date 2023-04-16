@@ -10,7 +10,7 @@ const Login = () => {
 
     const { register, handleSubmit } = useForm();
     const handleLoginForm = (data, even) => {
-        console.log(data)
+        // console.log(data)
 
         signInUser(data.email, data.password)
             .then(result => {
@@ -22,10 +22,8 @@ const Login = () => {
             .catch(error => {
                 console.log(error)
             })
-
-
-
     }
+
 
     return (
         <div className="hero my-10 xl:col-span-1 lg:col-span-1">
