@@ -22,7 +22,7 @@ const Navbar = () => {
 
         {
             user?.uid ? <>
-                <li><Link to='' onClick={handleSignOut} >Logout</Link></li>
+                <li><Link onClick={handleSignOut} >Logout</Link></li>
             </>
                 :
                 <>
